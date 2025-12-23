@@ -33,7 +33,7 @@ type CatalogItem struct {
 	ID            uint `gorm:"primaryKey"`
 	HouseholdID   uint `gorm:"not null;index"`
 	CanonicalName string
-	Category      string
+	Category      string `gorm:"not null";default:'other'`
 }
 
 type Recipe struct {
